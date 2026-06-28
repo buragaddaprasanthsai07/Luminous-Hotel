@@ -1,0 +1,42 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" width="100%" height="100%">
+  <!-- Definitions for Gradients -->
+  <defs>
+    <linearGradient id="gold-grad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#D4AF37" />
+      <stop offset="50%" stop-color="#FFDF73" />
+      <stop offset="100%" stop-color="#AA7C11" />
+    </linearGradient>
+    <filter id="glow" x="-20%" y="-20%" width="140%" height="140%">
+      <feGaussianBlur stdDeviation="2" result="blur" />
+      <feComposite in="SourceGraphic" in2="blur" operator="over" />
+    </filter>
+  </defs>
+
+  <!-- External thin ring -->
+  <circle cx="50" cy="50" r="44" fill="none" stroke="url(#gold-grad)" stroke-width="1.5" opacity="0.6"/>
+
+  <!-- Main glowing ring -->
+  <circle cx="50" cy="50" r="41" fill="none" stroke="url(#gold-grad)" stroke-width="2.5" />
+
+  <!-- Rays of Light (Luminous Theme) -->
+  <g stroke="url(#gold-grad)" stroke-width="1.5" stroke-linecap="round" opacity="0.8">
+    <!-- 8 major rays -->
+    <line x1="50" y1="6" x2="50" y2="12" />
+    <line x1="50" y1="94" x2="50" y2="88" />
+    <line x1="6" y1="50" x2="12" y2="50" />
+    <line x1="94" y1="50" x2="88" y2="50" />
+    <!-- Diagonal major rays -->
+    <line x1="19" y1="19" x2="23.5" y2="23.5" />
+    <line x1="81" y1="81" x2="76.5" y2="76.5" />
+    <line x1="19" y1="81" x2="23.5" y2="76.5" />
+    <line x1="81" y1="19" x2="76.5" y2="23.5" />
+  </g>
+
+  <!-- Stylized Sun / Monogram L at the center -->
+  <g fill="url(#gold-grad)" transform="translate(32, 25) scale(0.75)">
+    <!-- Monogram L in serif style -->
+    <path d="M12,4 C12.5,4 13.5,4.5 13.5,5.5 L13.5,42.5 C13.5,44.5 15.5,46 19.5,46 L40,46 C41.5,46 42.5,47 42.5,48 C42.5,49 41.5,50 39,50 L11,50 C9,50 8,49 8,48 C8,47 9,46 10,46 C11.5,46 12,45 12,42.5 L12,9 C12,6.5 11.5,6 10,6 C9,6 8,5 8,4 C8,3 9,4 12,4 Z" filter="url(#glow)" />
+    <!-- Little star/sparkle at the top right of L -->
+    <path d="M38,8 L40,11 L43,11 L41,13 L42,16 L38,14 L34,16 L35,13 L33,11 L36,11 Z" opacity="0.9"/>
+  </g>
+</svg>
