@@ -1,0 +1,419 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Our Destinations | Luminous Hotel</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" href="images/logo.svg" type="image/svg+xml">
+</head>
+<body>
+
+    <header>
+        <a href="index.html" class="logo"><img src="images/logo.svg" alt="Luminous Logo"><span>Luminous</span></a>
+        <button class="mobile-menu-toggle" id="menuToggle">☰</button>
+        <nav id="mainNav">
+            <ul>
+                <li><a href="index.html">HOME</a></li>
+                <li><a href="destinations.html" class="active">DESTINATIONS</a></li>
+                <li><a href="rooms.html">HOTELS & SUITES</a></li>
+                <li><a href="experiences.html">EXPERIENCES</a></li>
+                <li><a href="gallery.html">GALLERY</a></li>
+                <li><a href="about.html">ABOUT US</a></li>
+                <li class="dropdown">
+                    <a href="#" class="dropdown-trigger">MORE <span class="arrow">▼</span></a>
+                    <div class="mega-menu">
+                        <div class="mega-menu-content">
+                            <div class="mega-col promo-col">
+                                <h3>BOOK DIRECT</h3>
+                                <p>Enjoy exclusive savings, complimentary breakfast, and legendary hospitality.</p>
+                                <a href="booking.html" class="promo-btn">Book Now ❯</a>
+                            </div>
+                            <div class="mega-col links-col">
+                                <h4>EXPERIENCES</h4>
+                                <ul>
+                                    <li><a href="experiences.html">Legendary Dining</a></li>
+                                    <li><a href="experiences.html">J Wellness Circle</a></li>
+                                    <li><a href="gallery.html">Photo Gallery</a></li>
+                                    <li><a href="index.html#travel-stories">Travel Stories</a></li>
+                                </ul>
+                            </div>
+                            <div class="mega-col links-col">
+                                <h4>ABOUT & CONTACT</h4>
+                                <ul>
+                                    <li><a href="about.html">Our Legacy</a></li>
+                                    <li><a href="about.html">Our Philosophy</a></li>
+                                    <li><a href="booking.html">Contact Us</a></li>
+                                    <li><a href="booking.html">Manage Booking</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </li>
+                <li><a href="booking.html" class="btn-nav">BOOK A STAY</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Hero Banner with Search -->
+    <section class="destinations-hero">
+        <div style="z-index: 2; width: 100%;">
+            <h1 style="font-family: 'Playfair Display', Georgia, serif; font-size: 3rem; letter-spacing: 2px; text-transform: uppercase;">OUR DESTINATIONS</h1>
+            <p style="font-size: 1.1rem; margin-top: 0.5rem; opacity: 0.9;">Explore a world of luxury, cultural heritage, and wildlife sanctuaries.</p>
+            
+            <div class="search-box-wrapper">
+                <svg class="search-icon-svg" viewBox="0 0 24 24">
+                    <path d="M15.5 14h-.79l-.28-.27A6.471 6.471 0 0 0 16 9.5 6.5 6.5 0 1 0 9.5 16c1.61 0 3.09-.59 4.23-1.57l.27.28v.79l5 4.99L20.49 19l-4.99-5zm-6 0C7.01 14 5 11.99 5 9.5S7.01 5 9.5 5 14 7.01 14 9.5 11.99 14 9.5 14z"/>
+                </svg>
+                <input type="text" class="search-input" placeholder="Click here to search for Destinations or Hotels...">
+                <svg class="mic-icon-svg" viewBox="0 0 24 24">
+                    <path d="M12 14c1.66 0 3-1.34 3-3V5c0-1.66-1.34-3-3-3S9 3.34 9 5v6c0 1.66 1.34 3 3 3zm5.3-3c0 3-2.54 5.1-5.3 5.1S6.7 14 6.7 11H5c0 3.41 2.72 6.23 6 6.72V21h2v-3.28c3.28-.48 6-3.3 6-6.72h-1.7z"/>
+                </svg>
+            </div>
+        </div>
+    </section>
+
+    <!-- World Awaits Tabs -->
+    <section class="tabs-section">
+        <div class="section-header" style="padding: 0 0 1rem;">
+            <h2 style="font-size: 2.2rem; font-family: 'Playfair Display', Georgia, serif; font-weight: normal; color: var(--secondary-color); letter-spacing: 2px;">THE WORLD AWAITS</h2>
+            <p style="color: #666; font-size: 0.95rem; max-width: 600px; margin: 0.5rem auto 0; line-height: 1.6;">The world is full of amazing experiences. Allow us to show you just how wonderful they can be with our luxury hotels.</p>
+        </div>
+        <div class="tabs-slider-wrapper">
+            <button class="arrow-btn" id="arrowTabLeft">❮</button>
+            <button class="tab-btn active" data-target="all">ALL</button>
+            <button class="tab-btn" data-target="india">INDIA</button>
+            <button class="tab-btn" data-target="maldives">MALDIVES</button>
+            <button class="tab-btn" data-target="bhutan">BHUTAN</button>
+            <button class="tab-btn" data-target="sri lanka">SRI LANKA</button>
+            <button class="arrow-btn" id="arrowTabRight">❯</button>
+        </div>
+    </section>
+
+    <!-- Featured Cities Section -->
+    <section class="cities-section">
+        <div style="display: flex; justify-content: space-between; align-items: center; max-width: 1200px; margin: 0 auto; padding: 0 1rem 1rem; border-bottom: 1px solid #EEE;">
+            <h3 style="font-family: 'Playfair Display', Georgia, serif; font-size: 1.4rem; font-weight: normal; color: var(--secondary-color); text-transform: uppercase; letter-spacing: 1px;">Featured Destinations</h3>
+            <div style="display: flex; gap: 0.5rem;">
+                <button class="arrow-btn" id="arrowLeft">❮</button>
+                <button class="arrow-btn" id="arrowRight">❯</button>
+            </div>
+        </div>
+        <div style="max-width: 1200px; margin: 0 auto; overflow: hidden; padding: 0 1rem;">
+            <div class="cities-scroll">
+                <a href="#" class="city-node" onclick="document.querySelector('.search-input').value='jaipur'; document.querySelector('.search-input').dispatchEvent(new Event('input')); return false;">
+                    <div class="city-img-circle">
+                        <img src="https://images.unsplash.com/photo-1599661046289-e31897846e41?w=200" alt="Jaipur">
+                    </div>
+                    <span>Jaipur</span>
+                </a>
+                <a href="#" class="city-node" onclick="document.querySelector('.search-input').value='malé'; document.querySelector('.search-input').dispatchEvent(new Event('input')); return false;">
+                    <div class="city-img-circle">
+                        <img src="https://images.unsplash.com/photo-1439066615861-d1af74d74000?w=200" alt="Maldives">
+                    </div>
+                    <span>Maldives</span>
+                </a>
+                <a href="#" class="city-node" onclick="document.querySelector('.search-input').value='paro'; document.querySelector('.search-input').dispatchEvent(new Event('input')); return false;">
+                    <div class="city-img-circle">
+                        <img src="https://images.unsplash.com/photo-1528127269322-539801943592?w=200" alt="Bhutan">
+                    </div>
+                    <span>Bhutan</span>
+                </a>
+                <a href="#" class="city-node" onclick="document.querySelector('.search-input').value='pench'; document.querySelector('.search-input').dispatchEvent(new Event('input')); return false;">
+                    <div class="city-img-circle">
+                        <img src="https://images.unsplash.com/photo-1575550959106-5a7defe28b56?w=200" alt="Pench">
+                    </div>
+                    <span>Pench</span>
+                </a>
+                <a href="#" class="city-node" onclick="document.querySelector('.search-input').value='bentota'; document.querySelector('.search-input').dispatchEvent(new Event('input')); return false;">
+                    <div class="city-img-circle">
+                        <img src="https://images.unsplash.com/photo-1549488344-1f9b8d2bd1f3?w=200" alt="Bentota">
+                    </div>
+                    <span>Bentota</span>
+                </a>
+                <a href="#" class="city-node" onclick="document.querySelector('.search-input').value='munnar'; document.querySelector('.search-input').dispatchEvent(new Event('input')); return false;">
+                    <div class="city-img-circle">
+                        <img src="https://images.unsplash.com/photo-1564349683136-77e08dba1ef7?w=200" alt="Munnar">
+                    </div>
+                    <span>Munnar</span>
+                </a>
+                <a href="#" class="city-node" onclick="document.querySelector('.search-input').value='galle'; document.querySelector('.search-input').dispatchEvent(new Event('input')); return false;">
+                    <div class="city-img-circle">
+                        <img src="https://images.unsplash.com/photo-1544735716-392fe2489ffa?w=200" alt="Sri Lanka">
+                    </div>
+                    <span>Galle</span>
+                </a>
+                <a href="#" class="city-node" onclick="document.querySelector('.search-input').value='agra'; document.querySelector('.search-input').dispatchEvent(new Event('input')); return false;">
+                    <div class="city-img-circle">
+                        <img src="https://images.unsplash.com/photo-1548013146-72479768bada?w=200" alt="Agra">
+                    </div>
+                    <span>Agra</span>
+                </a>
+                <a href="#" class="city-node" onclick="document.querySelector('.search-input').value='kanha'; document.querySelector('.search-input').dispatchEvent(new Event('input')); return false;">
+                    <div class="city-img-circle">
+                        <img src="https://images.unsplash.com/photo-1566073771259-6a8506099945?w=200" alt="Kanha">
+                    </div>
+                    <span>Kanha</span>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Filters & View Selector Bar -->
+    <section class="filters-bar-section">
+        <div class="view-toggle">
+            <button class="toggle-btn active">LIST VIEW</button>
+            <button class="toggle-btn">MAP VIEW</button>
+        </div>
+        <div class="dropdown-filters">
+            <select class="filter-select" id="filterCity">
+                <option value="">Destination / City</option>
+                <option value="jaipur">Jaipur</option>
+                <option value="malé">Malé</option>
+                <option value="paro">Paro</option>
+                <option value="pench">Pench</option>
+                <option value="kanha">Kanha</option>
+                <option value="galle">Galle</option>
+            </select>
+            <select class="filter-select" id="filterTheme">
+                <option value="">Themes</option>
+                <option value="safari">Safari Lodges</option>
+                <option value="palace">Palaces</option>
+                <option value="beach">Beach Resorts</option>
+                <option value="nature">Nature Sanctuary</option>
+            </select>
+        </div>
+    </section>
+
+    <!-- Destinations Grid -->
+    <section class="destinations-grid-section">
+        <div class="destinations-grid">
+            
+            <!-- Card 1: Baghvan -->
+            <div class="dest-card" data-country="india" data-theme="safari" data-city="pench">
+                <div class="dest-img-box">
+                    <img src="https://images.unsplash.com/photo-1575550959106-5a7defe28b56?w=600" alt="Luminous Baghvan">
+                    <div class="dest-theme-badge">Safari</div>
+                </div>
+                <div class="dest-info">
+                    <h3>Luminous Baghvan</h3>
+                    <h4>Pench National Park, India</h4>
+                    <p>Embark on a journey into the wild of Pench. Featuring premium private bungalows overlooking the riverbed, traditional machans, and intuitive customized game drives.</p>
+                    <div class="dest-actions">
+                        <a href="booking.html?hotel=baghvan" class="dest-book-btn">BOOK NOW</a>
+                        <a href="experiences.html" class="dest-link">VISIT HOTEL ❯</a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Card 2: Banjaar Tola -->
+            <div class="dest-card" data-country="india" data-theme="safari" data-city="kanha">
+                <div class="dest-img-box">
+                    <img src="https://images.unsplash.com/photo-1566073771259-6a8506099945?w=600" alt="Luminous Banjaar Tola">
+                    <div class="dest-theme-badge">Safari</div>
+                </div>
+                <div class="dest-info">
+                    <h3>Luminous Banjaar Tola</h3>
+                    <h4>Kanha National Park, India</h4>
+                    <p>Answer the call to adventure in Kanha. Our luxury tented suites on the banks of the Banjaar River offer panoramic wilderness views and exceptional culinary choices.</p>
+                    <div class="dest-actions">
+                        <a href="booking.html?hotel=banjaartola" class="dest-book-btn">BOOK NOW</a>
+                        <a href="experiences.html" class="dest-link">VISIT HOTEL ❯</a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Card 3: Royal Palace -->
+            <div class="dest-card" data-country="india" data-theme="palace" data-city="jaipur">
+                <div class="dest-img-box">
+                    <img src="https://images.unsplash.com/photo-1607604276583-eef5d076aa5f?w=600" alt="Luminous Royal Palace">
+                    <div class="dest-theme-badge">Palace</div>
+                </div>
+                <div class="dest-info">
+                    <h3>Luminous Royal Palace</h3>
+                    <h4>Jaipur, India</h4>
+                    <p>Experience true royal living in the heart of Jaipur. Walk down historic colonnades and relax in majestic courtyards styled with hand-carved arches and premium golden details.</p>
+                    <div class="dest-actions">
+                        <a href="booking.html?hotel=royalpalace" class="dest-book-btn">BOOK NOW</a>
+                        <a href="about.html" class="dest-link">VISIT HOTEL ❯</a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Card 4: Ocean Reef Pavilion -->
+            <div class="dest-card" data-country="maldives" data-theme="beach" data-city="malé">
+                <div class="dest-img-box">
+                    <img src="https://images.unsplash.com/photo-1439066615861-d1af74d74000?w=600" alt="Ocean Reef Pavilion">
+                    <div class="dest-theme-badge">Beach</div>
+                </div>
+                <div class="dest-info">
+                    <h3>Luminous Ocean Reef Pavilion</h3>
+                    <h4>Malé, Maldives</h4>
+                    <p>Escape to private overwater bungalows surrounded by crystal clear turquoise horizons. Indulge in private infinity pool lounges and coral snorkeling adventures.</p>
+                    <div class="dest-actions">
+                        <a href="booking.html?hotel=maldives" class="dest-book-btn">BOOK NOW</a>
+                        <a href="experiences.html" class="dest-link">VISIT HOTEL ❯</a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Card 5: Tiger Nest Sanctuary -->
+            <div class="dest-card" data-country="bhutan" data-theme="nature" data-city="paro">
+                <div class="dest-img-box">
+                    <img src="https://images.unsplash.com/photo-1528127269322-539801943592?w=600" alt="Tiger Nest Sanctuary">
+                    <div class="dest-theme-badge">Nature</div>
+                </div>
+                <div class="dest-info">
+                    <h3>Luminous Tiger Nest</h3>
+                    <h4>Paro, Bhutan</h4>
+                    <p>Discover peaceful luxury nestled in the valleys of Bhutan. Traditional mud-brick suites offer custom restorative spa programs and stunning forest cliff vistas.</p>
+                    <div class="dest-actions">
+                        <a href="booking.html?hotel=bhutan" class="dest-book-btn">BOOK NOW</a>
+                        <a href="about.html" class="dest-link">VISIT HOTEL ❯</a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Card 6: Coconut Grove Resort -->
+            <div class="dest-card" data-country="sri lanka" data-theme="beach" data-city="galle">
+                <div class="dest-img-box">
+                    <img src="https://images.unsplash.com/photo-1544735716-392fe2489ffa?w=600" alt="Coconut Grove Resort">
+                    <div class="dest-theme-badge">Beach</div>
+                </div>
+                <div class="dest-info">
+                    <h3>Luminous Coconut Grove</h3>
+                    <h4>Galle, Sri Lanka</h4>
+                    <p>Unwind inside private beachfront bungalows flanked by historic palm groves. Enjoy authentic seafood dining experiences and sea turtle conservation sanctuaries.</p>
+                    <div class="dest-actions">
+                        <a href="booking.html?hotel=srilanka" class="dest-book-btn">BOOK NOW</a>
+                        <a href="experiences.html" class="dest-link">VISIT HOTEL ❯</a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Card 7: Clifftop Resort Bentota -->
+            <div class="dest-card" data-country="sri lanka" data-theme="beach" data-city="bentota">
+                <div class="dest-img-box">
+                    <img src="https://images.unsplash.com/photo-1549488344-1f9b8d2bd1f3?w=600" alt="Luminous Clifftop Resort">
+                    <div class="dest-theme-badge">Beach</div>
+                </div>
+                <div class="dest-info">
+                    <h3>Luminous Clifftop Resort</h3>
+                    <h4>Bentota, Sri Lanka</h4>
+                    <p>Perched majestically on golden seaside cliffs, offering modern infinity plunge pools, private sundecks, and direct pristine beach access.</p>
+                    <div class="dest-actions">
+                        <a href="booking.html?hotel=bentota" class="dest-book-btn">BOOK NOW</a>
+                        <a href="experiences.html" class="dest-link">VISIT HOTEL ❯</a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Card 8: Tea Valley Pavilion Munnar -->
+            <div class="dest-card" data-country="india" data-theme="nature" data-city="munnar">
+                <div class="dest-img-box">
+                    <img src="https://images.unsplash.com/photo-1564349683136-77e08dba1ef7?w=600" alt="Luminous Tea Valley Pavilion">
+                    <div class="dest-theme-badge">Nature</div>
+                </div>
+                <div class="dest-info">
+                    <h3>Luminous Tea Valley Pavilion</h3>
+                    <h4>Munnar, India</h4>
+                    <p>Escape to misty altitudes surrounded by cascading tea plantations, offering colonial fireplace suites and organic tea estates tours.</p>
+                    <div class="dest-actions">
+                        <a href="booking.html?hotel=munnar" class="dest-book-btn">BOOK NOW</a>
+                        <a href="about.html" class="dest-link">VISIT HOTEL ❯</a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- No Results Message -->
+            <div class="no-results-msg">
+                <h3>No Hotels Found</h3>
+                <p>We couldn't find any Luminous hotels matching your current search criteria. Try selecting another tab or clear your text query.</p>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- Other Hotels Highlight Section -->
+    <section class="dark-section" style="border-top: 1px solid #333;">
+        <div class="section-header">
+            <h2>OTHER LUMINOUS HOTELS</h2>
+            <p>Experience the same legendary luxury at our other premium city landmarks.</p>
+        </div>
+        <div class="card-container">
+            <div class="card dark-card">
+                <img src="https://images.unsplash.com/photo-1566073771259-6a8506099945?w=600" alt="The Claridges New Delhi">
+                <h3>Luminous The Claridges</h3>
+                <h4 style="color: var(--primary-color); font-size: 0.8rem; letter-spacing: 1.5px; text-transform: uppercase;">New Delhi</h4>
+                <p>Established as a beacon of luxury in the capital, combining legendary hospitality, heritage charm, and elegant lawns.</p>
+                <div class="card-actions">
+                    <a href="booking.html?hotel=claridges" class="dest-book-btn" style="padding: 8px 18px; font-size: 0.8rem;">BOOK NOW</a>
+                    <a href="about.html" class="dest-link" style="color: var(--white); font-size: 0.8rem;">VISIT HOTEL ❯</a>
+                </div>
+            </div>
+            <div class="card dark-card">
+                <img src="https://images.unsplash.com/photo-1582719508461-905c673771fd?w=600" alt="Atmantan Pune">
+                <h3>Luminous Atmantan</h3>
+                <h4 style="color: var(--primary-color); font-size: 0.8rem; letter-spacing: 1.5px; text-transform: uppercase;">Pune</h4>
+                <p>Nestled in the serene Sahyadri hills, Atmantan is our premier wellness center dedicated to physical rejuvenation and spiritual balance.</p>
+                <div class="card-actions">
+                    <a href="booking.html?hotel=atmantan" class="dest-book-btn" style="padding: 8px 18px; font-size: 0.8rem;">BOOK NOW</a>
+                    <a href="experiences.html" class="dest-link" style="color: var(--white); font-size: 0.8rem;">VISIT HOTEL ❯</a>
+                </div>
+            </div>
+            <div class="card dark-card">
+                <img src="https://images.unsplash.com/photo-1540555700478-4be289fbecef?w=600" alt="Brij Anayra Dharamshala">
+                <h3>Luminous Brij Anayra</h3>
+                <h4 style="color: var(--primary-color); font-size: 0.8rem; letter-spacing: 1.5px; text-transform: uppercase;">Dharamshala</h4>
+                <p>Wake up to mountain birdsong and sunlit tea gardens. Nestled in a centennial villa with spectacular Himalayan peak views.</p>
+                <div class="card-actions">
+                    <a href="booking.html?hotel=brijanayra" class="dest-book-btn" style="padding: 8px 18px; font-size: 0.8rem;">BOOK NOW</a>
+                    <a href="rooms.html" class="dest-link" style="color: var(--white); font-size: 0.8rem;">VISIT HOTEL ❯</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="premium-footer">
+        <div class="footer-grid">
+            <div class="footer-col">
+                <h4>Luminous</h4>
+                <p style="color: #b0b0b0; font-size: 0.95rem; margin-bottom: 1rem;">Experience the grandeur of a century of legendary hospitality.</p>
+                <p style="color: #b0b0b0; font-size: 0.95rem;">📍 123 Luxury Avenue, Metropolis</p>
+                <p style="color: #b0b0b0; font-size: 0.95rem;">📞 1-800-111-825</p>
+            </div>
+            <div class="footer-col">
+                <h4>Quick Links</h4>
+                <ul>
+                    <li><a href="about.html">About Our Legacy</a></li>
+                    <li><a href="rooms.html">Rooms & Suites</a></li>
+                    <li><a href="gallery.html">Photo Gallery</a></li>
+                    <li><a href="booking.html">Contact Us</a></li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h4>Experiences</h4>
+                <ul>
+                    <li><a href="#">Legendary Dining</a></li>
+                    <li><a href="#">J Wellness Circle</a></li>
+                    <li><a href="#">Exclusive Offers</a></li>
+                </ul>
+            </div>
+            <div class="footer-col newsletter-box">
+                <h4>Newsletter</h4>
+                <p style="color: #b0b0b0; font-size: 0.9rem; margin-bottom: 10px;">Get the latest updates on exclusive offers.</p>
+                <form action="#">
+                    <input type="email" placeholder="Your Email Address" required>
+                    <button type="submit">Subscribe</button>
+                </form>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2026 Luminous Hotel Limited. All Rights Reserved.</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

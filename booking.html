@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Book a Room | Luminous Hotel</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" href="images/logo.svg" type="image/svg+xml">
+</head>
+<body>
+
+    <header>
+        <a href="index.html" class="logo"><img src="images/logo.svg" alt="Luminous Logo"><span>Luminous</span></a>
+        <button class="mobile-menu-toggle" id="menuToggle">☰</button>
+        <nav id="mainNav">
+            <ul>
+                <li><a href="index.html">HOME</a></li>
+                <li><a href="destinations.html">DESTINATIONS</a></li>
+                <li><a href="rooms.html">HOTELS & SUITES</a></li>
+                <li><a href="experiences.html">EXPERIENCES</a></li>
+                <li><a href="gallery.html">GALLERY</a></li>
+                <li><a href="about.html">ABOUT US</a></li>
+                <li class="dropdown">
+                    <a href="#" class="dropdown-trigger">MORE <span class="arrow">▼</span></a>
+                    <div class="mega-menu">
+                        <div class="mega-menu-content">
+                            <div class="mega-col promo-col">
+                                <h3>BOOK DIRECT</h3>
+                                <p>Enjoy exclusive savings, complimentary breakfast, and legendary hospitality.</p>
+                                <a href="booking.html" class="promo-btn">Book Now ❯</a>
+                            </div>
+                            <div class="mega-col links-col">
+                                <h4>EXPERIENCES</h4>
+                                <ul>
+                                    <li><a href="experiences.html">Legendary Dining</a></li>
+                                    <li><a href="experiences.html">J Wellness Circle</a></li>
+                                    <li><a href="gallery.html">Photo Gallery</a></li>
+                                    <li><a href="index.html#travel-stories">Travel Stories</a></li>
+                                </ul>
+                            </div>
+                            <div class="mega-col links-col">
+                                <h4>ABOUT & CONTACT</h4>
+                                <ul>
+                                    <li><a href="about.html">Our Legacy</a></li>
+                                    <li><a href="about.html">Our Philosophy</a></li>
+                                    <li><a href="booking.html">Contact Us</a></li>
+                                    <li><a href="booking.html">Manage Booking</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </li>
+                <li><a href="booking.html" class="btn-nav">BOOK A STAY</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section class="inner-hero" style="background-image: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url('https://images.unsplash.com/photo-1566073771259-6a8506099945?w=1600');">
+        <h1>RESERVE YOUR STAY</h1>
+    </section>
+
+    <main class="booking-page-wrapper">
+        <div class="booking-container">
+            <p>Please fill out the form below and our concierge will confirm your reservation.</p>
+            
+            <form id="bookingForm" class="booking-form">
+                
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="fullName">Full Name</label>
+                        <input type="text" id="fullName" name="fullName" placeholder="Enter your full name">
+                        <small class="error-msg"></small>
+                    </div>
+                    <div class="form-group">
+                        <label for="email">Email Address</label>
+                        <input type="email" id="email" name="email" placeholder="email@example.com">
+                        <small class="error-msg"></small>
+                    </div>
+                </div>
+
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="phoneNumber">Phone Number</label>
+                        <input type="tel" id="phoneNumber" name="phoneNumber" placeholder="Enter your phone number" maxlength="10" inputmode="numeric">
+                        <small class="error-msg"></small>
+                    </div>
+                    <div class="form-group">
+                        <label for="roomType">Select Room Category</label>
+                        <select id="roomType" name="roomType">
+                            <option value="">Choose a room...</option>
+                            <option value="deluxe">Deluxe City View Room</option>
+                            <option value="suite">Premium Ocean Suite</option>
+                            <option value="villa">Luxury Private Villa</option>
+                            <option value="emperor">Golden Emperor Suite</option>
+                            <option value="clifftop">Clifftop Sanctuary Villa</option>
+                        </select>
+                        <small class="error-msg"></small>
+                    </div>
+                </div>
+
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="checkIn">Check-in Date</label>
+                        <input type="date" id="checkIn" name="checkIn">
+                        <small class="error-msg"></small>
+                    </div>
+                    <div class="form-group">
+                        <label for="checkOut">Check-out Date</label>
+                        <input type="date" id="checkOut" name="checkOut">
+                        <small class="error-msg"></small>
+                    </div>
+                </div>
+
+                <div class="form-row" style="flex-direction: column; margin-bottom: 2rem;">
+                    <label style="font-weight: 600; margin-bottom: 0.8rem; color: var(--secondary-color); font-size: 0.9rem; text-transform: uppercase; letter-spacing: 1px;">Concierge Custom Add-ons</label>
+                    <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 1rem; width: 100%;">
+                        <label style="display: flex; align-items: center; gap: 0.6rem; cursor: pointer; font-size: 0.9rem; color: #555;">
+                            <input type="checkbox" name="addons" value="airport" style="width: auto; cursor: pointer; accent-color: var(--primary-color);"> Airport Limousine Transfer
+                        </label>
+                        <label style="display: flex; align-items: center; gap: 0.6rem; cursor: pointer; font-size: 0.9rem; color: #555;">
+                            <input type="checkbox" name="addons" value="spa" style="width: auto; cursor: pointer; accent-color: var(--primary-color);"> J Spa Wellness Session
+                        </label>
+                        <label style="display: flex; align-items: center; gap: 0.6rem; cursor: pointer; font-size: 0.9rem; color: #555;">
+                            <input type="checkbox" name="addons" value="chef" style="width: auto; cursor: pointer; accent-color: var(--primary-color);"> Private Sommelier & Chef Dinner
+                        </label>
+                        <label style="display: flex; align-items: center; gap: 0.6rem; cursor: pointer; font-size: 0.9rem; color: #555;">
+                            <input type="checkbox" name="addons" value="tours" style="width: auto; cursor: pointer; accent-color: var(--primary-color);"> Guided Palace Heritage Walk
+                        </label>
+                    </div>
+                </div>
+
+                <button type="submit" class="btn-primary booking-btn">Confirm Booking</button>
+                <div id="successMsg" class="success-msg hidden">Thank you! Your luxury booking request has been submitted successfully.</div>
+            </form>
+        </div>
+    </main>
+
+   <footer class="premium-footer">
+        <div class="footer-grid">
+            <div class="footer-col">
+                <h4>Luminous</h4>
+                <p style="color: #b0b0b0; font-size: 0.95rem; margin-bottom: 1rem;">Experience the grandeur of a century of legendary hospitality.</p>
+                <p style="color: #b0b0b0; font-size: 0.95rem;">📍 123 Luxury Avenue, Metropolis</p>
+                <p style="color: #b0b0b0; font-size: 0.95rem;">📞 1-800-111-825</p>
+            </div>
+            <div class="footer-col">
+                <h4>Quick Links</h4>
+                <ul>
+                    <li><a href="about.html">About Our Legacy</a></li>
+                    <li><a href="rooms.html">Rooms & Suites</a></li>
+                    <li><a href="gallery.html">Photo Gallery</a></li>
+                    <li><a href="booking.html">Contact Us</a></li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h4>Experiences</h4>
+                <ul>
+                    <li><a href="#">Legendary Dining</a></li>
+                    <li><a href="#">J Wellness Circle</a></li>
+                    <li><a href="#">Exclusive Offers</a></li>
+                </ul>
+            </div>
+            <div class="footer-col newsletter-box">
+                <h4>Newsletter</h4>
+                <p style="color: #b0b0b0; font-size: 0.9rem; margin-bottom: 10px;">Get the latest updates on exclusive offers.</p>
+                <form action="#">
+                    <input type="email" placeholder="Your Email Address" required>
+                    <button type="submit">Subscribe</button>
+                </form>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2026 Luminous Hotel Limited. All Rights Reserved.</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
